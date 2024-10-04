@@ -17,8 +17,18 @@ const StatusBar = ({
       } text-white text-xs`}
     >
       <div className="flex items-center space-x-2">
-        <GitBranch className="w-4 h-4" />
-        <span>master</span>
+        <button
+          onClick={() =>
+            window.open("https://github.com/chiranjeebhub/vscode-portfolio")
+          }
+          className="hover:bg-blue-700 px-1 py-0.5 rounded"
+        >
+          <GitBranch className="w-4 h-4" />
+        </button>
+
+        <span>
+          main<sup>*</sup>
+        </span>
         <span>🔗 WSL: Ubuntu</span>
       </div>
       <div className="flex items-center space-x-2">
