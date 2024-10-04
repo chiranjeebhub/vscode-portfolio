@@ -4,7 +4,7 @@ Welcome to the **VSCode Portfolio** project! This project is a portfolio website
 
 ## Demo
 
-[Live Demo](https://your-live-demo-link.com)
+[Live Demo](https://vscode-portfolio-cj.vercel.app/)
 
 ## Features
 
