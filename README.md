@@ -45,6 +45,23 @@ The file structure is a simulated VSCode project with folders and files represen
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/vscode-portfolio.git
+   git clone https://github.com/chiranjeebhub/vscode-portfolio.git
    cd vscode-portfolio
    ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   This will start the development server on `http://localhost:3000`.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
+
+## License
+
+This project is licensed under the MIT License.
