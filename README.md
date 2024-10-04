@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VSCode Portfolio
 
-## Getting Started
+Welcome to the **VSCode Portfolio** project! This project is a portfolio website designed to look and feel like Visual Studio Code, offering an interactive file tree structure, open editors section, and a built-in terminal for executing code snippets (simulated). The portfolio showcases different sections like `Welcome`, `About`, `Projects`, `Experiences`, and `Case Studies`, all presented in a developer-friendly VSCode-like interface.
 
-First, run the development server:
+## Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[Live Demo](https://your-live-demo-link.com)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **File Explorer Sidebar**: Simulates a VSCode file explorer where you can expand and collapse folders, as well as open and close files.
+- **Open Editors Section**: Displays currently open files in a VSCode-style tab layout. You can open, close, and switch between different files easily.
+- **Code Display**: The main content area shows the code for the currently active file in a monospaced font, with syntax highlighting for a true developer experience.
+- **Built-in Terminal (Simulated)**: A simulated terminal that shows commands executed related to the open file. It's a fun addition to make the portfolio feel more like a working VSCode environment.
+- **Sidebar Icons**: Switch between different sidebar features like files, search, Git (coming soon), and extensions (coming soon).
+- **Light/Dark Theme Toggle**: Easily switch between light and dark mode, just like in VSCode.
+- **Responsive Design**: Works well on both desktop and mobile devices.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **Next.js**: The entire portfolio is built using Next.js, a React framework for server-side rendering.
+- **Tailwind CSS**: Used for the styling, ensuring a consistent and responsive design.
+- **Lucide React Icons**: The sidebar icons and other UI elements are powered by the Lucide icon library.
+- **React Icons**: Integrated for GitHub and LinkedIn icons in the status bar.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The file structure is a simulated VSCode project with folders and files representing different sections of the portfolio:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `welcome.jsx`: Displays a welcome message.
+- `about.jsx`: Shows a brief introduction about me.
+- `contact.jsx`: Provides contact details like email, LinkedIn, and GitHub.
+- `Projects/`: Contains files for each project case study.
+- `Experiences/`: Lists files for each work experience.
+- `Case Studies/`: Contains individual case studies.
 
-## Deploy on Vercel
+## How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Clicking on a file in the sidebar opens it in the main content area, displaying its code.
+- Multiple files can be opened, and you can switch between them using the tabs at the top.
+- The sidebar can be toggled using `Ctrl + B` (like in VSCode), and individual files or tabs can be closed by clicking the `X` icon.
+- You can toggle between light and dark themes by clicking the sun/moon icon in the status bar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/vscode-portfolio.git
+   cd vscode-portfolio
+   ```
