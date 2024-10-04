@@ -2,9 +2,9 @@
 
 Welcome to the **VSCode Portfolio** project! This project is a portfolio website designed to look and feel like Visual Studio Code, offering an interactive file tree structure, open editors section, and a built-in terminal for executing code snippets (simulated). The portfolio showcases different sections like `Welcome`, `About`, `Projects`, `Experiences`, and `Case Studies`, all presented in a developer-friendly VSCode-like interface.
 
-## Demo
+## 🚀 **[Check out the Live Demo!](https://vscode-portfolio-cj.vercel.app/)** 🔥
 
-[Live Demo](https://vscode-portfolio-cj.vercel.app/)
+<img src="https://utfs.io/f/z3Yl2icFpQGOzOFF31cFpQGOcrlezXTMIBkxAsgdVRNES264" alt="VSCode Portfolio" width="50%" height="auto"><img src="https://utfs.io/f/z3Yl2icFpQGO7eEjp42Ss8nwPEhB3YHcaTp2J6GetRX4FVWb" alt="VSCode Portfolio" width="50%" height="auto">
 
 ## Features
 
@@ -40,6 +40,35 @@ The file structure is a simulated VSCode project with folders and files represen
 - Multiple files can be opened, and you can switch between them using the tabs at the top.
 - The sidebar can be toggled using `Ctrl + B` (like in VSCode), and individual files or tabs can be closed by clicking the `X` icon.
 - You can toggle between light and dark themes by clicking the sun/moon icon in the status bar.
+
+# Future Roadmap
+
+### 🔄 Backend Integration
+
+- Build API (Node.js or other) to fetch folders/files in real-time.
+- Integrate dynamic file trees with the frontend.
+
+### 📂 File Management
+
+- Add right-click and file menu options to create files/folders.
+- Enable folder/file creation via the top menu (like traditional IDEs).
+
+### 🎨 Theme Management
+
+- Support multiple themes (beyond dark/light) with theme selection in settings/sidebar.
+
+### 📁 Source Control Integration
+
+- Reflect file/folder changes in "Source Control."
+- Add a "Sync Changes" button to commit changes to the backend.
+
+### 📝 File Editing
+
+- Allow real-time file content editing and sync to the backend.
+
+### 🖥️ Code Preview on Run
+
+- Enable live previews for file outputs (e.g., React or HTML preview on "Run").
 
 ## Installation & Setup
 
