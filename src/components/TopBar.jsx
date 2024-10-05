@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { X, Menu } from "lucide-react";
 
 const TopBar = ({
@@ -9,6 +9,17 @@ const TopBar = ({
   setActiveMenu,
   menuRef,
 }) => {
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsSidebarOpen(false);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [setIsSidebarOpen]);
+
   return (
     <div
       className={`flex items-center justify-between p-2 ${

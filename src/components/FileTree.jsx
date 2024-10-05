@@ -65,7 +65,7 @@ const FileTree = ({
       </div>
       <div className="p-2">
         {openTabs.length > 0 && (
-          <div className="mb-4 border-b border-gray-700 pb-2">
+          <div className="mb-1 border-b border-gray-700 pb-2">
             <div
               className={`flex items-center justify-between mb-2 ${
                 theme === "dark" ? "text-gray-400" : "text-gray-600"

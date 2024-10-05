@@ -38,9 +38,9 @@ const StatusBar = ({
         >
           <Terminal className="w-4 h-4" />
         </button>
-        <span>Ln 1, Col 1</span>
-        <span>Spaces: 2</span>
-        <span>UTF-8</span>
+        <span className="hidden md:inline">Ln 1, Col 1</span>
+        <span className="hidden md:inline">Spaces: 2</span>
+        <span className="hidden md:inline">UTF-8</span>
         <span>
           {activeFile ? activeFile.split(".").pop().toUpperCase() : "TXT"}
         </span>
