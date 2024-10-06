@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect, useRef } from "react";
 import { Terminal, Sun, Moon, GitBranch } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
@@ -8,7 +7,7 @@ import Sidebar from "@/components/Sidebar";
 import CodeEditor from "@/components/CodeEditor";
 import StatusBar from "@/components/StatusBar";
 
-const files = {
+const initialFiles = {
   "welcome.jsx": `export default function Welcome() {
   return (
     <div className="p-4">
@@ -76,6 +75,7 @@ const folderStructure = {
 };
 
 export default function VSCodePortfolio() {
+  const [files, setFiles] = useState(initialFiles); // Make files a state variable
   const [activeFile, setActiveFile] = useState("welcome.jsx");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isTerminalOpen, setIsTerminalOpen] = useState(true);
@@ -168,10 +168,12 @@ export default function VSCodePortfolio() {
         <CodeEditor
           theme={theme}
           openTabs={openTabs}
+          setOpenTabs={setOpenTabs}
           activeFile={activeFile}
           setActiveFile={setActiveFile}
           closeTab={closeTab}
           files={files}
+          setFiles={setFiles} // Pass setFiles to update the state
           isTerminalOpen={isTerminalOpen}
           setIsTerminalOpen={setIsTerminalOpen}
         />

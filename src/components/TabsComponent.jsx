@@ -1,7 +1,13 @@
 import React from "react";
 import { X } from "lucide-react";
 
-const Tabs = ({ openTabs, setOpenTabs, activeFile, setActiveFile, theme }) => {
+const TabsComponent = ({
+  openTabs,
+  setOpenTabs,
+  activeFile,
+  setActiveFile,
+  theme,
+}) => {
   const closeTab = (fileName, e) => {
     e.stopPropagation();
     setOpenTabs((prev) => prev.filter((tab) => tab !== fileName));
@@ -12,7 +18,11 @@ const Tabs = ({ openTabs, setOpenTabs, activeFile, setActiveFile, theme }) => {
 
   return (
     <div
-      className={`flex ${theme === "dark" ? "bg-gray-800 border-gray-700" : "bg-gray-200 border-gray-300"} border-b overflow-x-auto`}
+      className={`flex ${
+        theme === "dark"
+          ? "bg-gray-800 border-gray-700"
+          : "bg-gray-200 border-gray-300"
+      } border-b overflow-x-auto`}
     >
       {openTabs.map((tab) => (
         <div
@@ -47,4 +57,4 @@ const Tabs = ({ openTabs, setOpenTabs, activeFile, setActiveFile, theme }) => {
   );
 };
 
-export default Tabs;
+export default TabsComponent;
