@@ -1,5 +1,14 @@
 import React from "react";
-import { ChevronDown, ChevronRight, Folder, File, X } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronRight,
+  Folder,
+  File,
+  X,
+  CopyX,
+  FolderOpen,
+} from "lucide-react";
+import { FaFolder, FaFolderOpen, FaReact } from "react-icons/fa";
 
 const FileTree = ({
   folderStructure,
@@ -16,7 +25,7 @@ const FileTree = ({
   const renderFileTree = (item, depth = 0) => (
     <div key={item.name} className={`ml-${depth * 4}`}>
       {item.type === "folder" ? (
-        <div>
+        <div className={`${depth === 0 ? "" : "ml-3"}`}>
           <div
             className={`flex items-center cursor-pointer py-1 ${
               theme === "dark" ? "hover:bg-gray-700" : "hover:bg-gray-200"
@@ -28,7 +37,12 @@ const FileTree = ({
             ) : (
               <ChevronRight className="w-4 h-4 mr-1" />
             )}
-            <Folder className="w-4 h-4 mr-2" />
+            {expandedFolders.includes(item.name) ? (
+              <FaFolderOpen className="w-4 h-4 mr-2" />
+            ) : (
+              <FaFolder className="w-4 h-4 mr-2" />
+            )}
+
             <span>{item.name}</span>
           </div>
           {expandedFolders.includes(item.name) &&
@@ -47,7 +61,7 @@ const FileTree = ({
           }`}
           onClick={() => openFile(item.name)}
         >
-          <File className="w-4 h-4 mr-2" />
+          <FaReact className="w-4 h-4 mr-2 text-[#61DBFB]" />
           <span>{item.name}</span>
         </div>
       )}
@@ -56,13 +70,13 @@ const FileTree = ({
 
   return (
     <>
-      <div
+      {/* <div
         className={`flex items-center justify-between p-2 ${
           theme === "dark" ? "border-gray-700" : "border-gray-300"
         } border-b`}
       >
         <span className="font-semibold tex-md">EXPLORER</span>
-      </div>
+      </div> */}
       <div className="p-2">
         {openTabs.length > 0 && (
           <div className="mb-1 border-b border-gray-700 pb-2">
@@ -71,9 +85,9 @@ const FileTree = ({
                 theme === "dark" ? "text-gray-400" : "text-gray-600"
               }`}
             >
-              <span className="font-semibold text-sm">OPEN EDITORS</span>
-              <X
-                className="w-3 h-3 cursor-pointer"
+              <div className="font-semibold text-sm">OPEN EDITORS</div>
+              <CopyX
+                className="w-4 h-4 cursor-pointer -mt-1"
                 onClick={() => {
                   setOpenTabs([]);
                   setActiveFile(null);
@@ -83,7 +97,7 @@ const FileTree = ({
             {openTabs.map((tab) => (
               <div
                 key={tab}
-                className={`flex items-center justify-between py-1 px-2 ${
+                className={`flex items-center py-1 px-2 ${
                   activeFile === tab
                     ? theme === "dark"
                       ? "bg-gray-700"
@@ -92,11 +106,12 @@ const FileTree = ({
                 } cursor-pointer`}
                 onClick={() => setActiveFile(tab)}
               >
-                <span>{tab}</span>
                 <X
                   className="w-3 h-3 cursor-pointer"
                   onClick={(e) => closeTab(tab, e)}
                 />
+                <FaReact className="w-4 h-4 mr-2 text-[#61DBFB] ml-2" />
+                <span>{tab}</span>
               </div>
             ))}
           </div>

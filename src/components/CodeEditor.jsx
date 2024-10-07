@@ -107,7 +107,7 @@ export default function CodeEditor({
                   theme === "dark" ? "text-gray-500" : "text-gray-400"
                 }`}
               >
-                Select a file to view its preview
+                Select a file to see code preview
               </div>
             )}
           </div>
