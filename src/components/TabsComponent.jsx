@@ -1,5 +1,6 @@
 import React from "react";
 import { X } from "lucide-react";
+import { FaReact } from "react-icons/fa";
 
 const TabsComponent = ({
   openTabs,
@@ -27,7 +28,7 @@ const TabsComponent = ({
       {openTabs.map((tab) => (
         <div
           key={tab}
-          className={`px-3 py-2 cursor-pointer border-r ${
+          className={`flex justify-between items-center pr-2 px-3 py-2 cursor-pointer border-r ${
             theme === "dark" ? "border-gray-700" : "border-gray-300"
           } ${
             activeFile === tab
@@ -40,7 +41,11 @@ const TabsComponent = ({
           }`}
           onClick={() => setActiveFile(tab)}
         >
-          <span className="mr-2">{tab}</span>
+          <div className="flex items-center">
+            <FaReact className="w-4 h-4 mr-2 text-[#61DBFB]" />
+            <span className="mr-2">{tab}</span>
+          </div>
+
           <button
             className={
               theme === "dark"
